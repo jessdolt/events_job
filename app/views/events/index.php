@@ -14,7 +14,6 @@
                     </ul>
                 </div>
                 
-                
                 <div class="event">
                     <?php foreach($data as $events){?>
                         <ul class="event-head-ul">
@@ -27,7 +26,7 @@
                     <?php }?>  
                 </div>
             </div>
-            <a class="btn-link btn-new" href="<?php echo URLROOT;?>/events/eventAdd">Add New Event</button>
+            <a class="btn-link btn-new" href="<?php echo URLROOT;?>/events/add">Add New Event</button>
         </div>
     </div>
    
