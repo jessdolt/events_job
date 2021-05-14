@@ -70,6 +70,7 @@
         </div>
     </div>
 
+
     <script> 
         const fileUpload = document.getElementById('fileUpload');
         const img_box = document.getElementById('myImg');
@@ -84,8 +85,6 @@
             })     
         
         }) 
-
-        
     </script>
     <script>
             CKEDITOR.replace( 'job_description' );

@@ -1,0 +1,682 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.img_box{
+    width: 500px;
+    height: 250px;
+}
+
+.root{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.form-container{
+    border: 1px solid black;
+    padding: 20px;
+    
+}
+
+.form > *{
+    display: block;
+    padding: 10px 0;
+}
+
+.form input, .form textarea{
+    width: 100%;
+}
+
+.form input, .form textarea:focus{
+    outline:none;
+    padding: 10px;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn{
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    transition: all .2s;
+}
+
+
+.events-container{
+    border: 1px solid black;
+    padding: 20px 30px;
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.event-title{
+    text-align: center;
+}
+
+.events{
+    display: flex;
+    flex-direction: column;
+}
+
+.event-header{
+    border: 1px solid black;    
+}
+
+.event-head-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+
+.event-head-ul li{
+    text-transform: capitalize;
+    list-style: none;
+    flex: 1;
+}
+
+.btn-edit{
+    background-color: lightgreen;
+}
+.btn-delete{
+    background-color: lightcoral;
+}
+
+.btn-link{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+.btn-new{
+    padding: 10px 0;
+    background-color: lightblue;
+}
+
+.event-img{
+    max-width: 100%;
+    padding: 10px;
+}
+
+.nav-link{
+    padding: 15px 25px;
+    background-color: bisque;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    transition: all .2s;
+}
+
+.nav-link:not(:last-child){
+    margin-right: 20px;
+}
+
+.nav-link:hover{
+    transform: scale(1.05);
+}
+
+.job-portal-title{
+    text-align: center;
+    
+}
+.title-holder{
+    width: 100%;
+}
+
+.job-container{
+    background-color: rgba(224,224,224);
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job-card-container{
+    background-color: white;
+    padding: 20px;
+    border: 2px solid rgba(0,0,0,.4);
+    box-shadow: 0 3px 3px rgba(0,0,0,.3);
+    border-radius: 5px;
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.job-card{
+    display: grid; 
+    grid-template-columns: 1fr;
+    line-height: 1;
+    grid-row-gap: 12px;
+    border: 1px solid rgb(224,224,224);
+    border-radius: 10px;
+    padding: 10px;
+    position:relative;
+}
+
+.job-title{
+
+    font-size: 18px;
+}
+
+.job-company{
+    font-size: 17px;
+}
+
+.job-description{
+    font-size: 16px;
+    
+} 
+
+.job-posted{
+    font-size: 13px;
+}
+
+.job-see_more{
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    text-align: left;
+    text-decoration: underline;
+    transition: all .2s;
+}
+
+.job-see_more:hover{
+    transform:translateX(6px);
+}
+
+
+.btn-job{
+    border-radius: 10px;
+    background-color: rgba(252,88,65,.8) ;
+    color: black;
+    text-align: center;
+    width: 50%;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    transition: all .2s;
+}
+
+.btn-job:hover{
+    transform:scale(1.05);
+}
+
+.form-job{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.form-group label:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select{
+    padding: 5px;
+}
+
+.editor-field{
+    height: 100vh;
+}
+
+.job-card-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.job-work-status{
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+.job-work-status--ft{
+    background-color: rgba(255, 255, 0, 0.65);
+}
+
+.job-work-status--pt{
+    background-color: yellowgreen;
+}
+
+.label{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.l-content{
+    font-size: 21px;
+    text-transform: capitalize;
+}
+
+.form-group-single-h{
+    display: flex;
+    align-items: center;
+}
+
+.btn-group{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.btn-job-edit, .btn-job-delete{
+    padding: 20px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    transition: all .2s;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.btn-job-edit{
+    background-color: lightgreen;
+}
+.btn-job-delete{
+    background-color: lightsalmon;
+}
+
+.btn-job-edit:hover{ 
+    transform: scale(2.05);
+}
+
+.btn-job-delete:hover{
+    transform: scale(2.05);
+}
+
+
+.editor-content, .editor-content pre{
+    font-size: 17px;
+    margin-top: 20px;
+    line-height: 1.2;
+    word-wrap: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.text-content p, .text-content pre{
+    margin-left: 25px;
+}
+.text-content ul li{
+    margin-left: 50px;
+}
+
+.ml-small{
+    margin-left: 10px;
+}
+
+.company_logo{
+    width: 250px;
+    height: 100px;
+}
+
+
+
+/* USERS STYLES */
+
+.users{
+    display: flex;
+    flex-direction: column;
+    width: 100%;   
+}
+
+.users-header{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.users-head-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  
+}
+
+.users-head-ul li{
+    flex: 1;
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+.user{
+    padding: 20px 0;
+}
+
+
+.users-form{
+    width: 45vw;
+}
+
+.form-container input{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.7px;
+}
+
+
+
+/* Survey */
+
+
+.survey-container{
+    width: 60%;
+}
+
+.btn-survey-save{
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+
+.survey-form{
+    background-color: white;
+    padding: 20px;
+    border: 2px solid rgba(0,0,0,.4);
+    box-shadow: 0 3px 3px rgba(0,0,0,.3);
+    border-radius: 5px;
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.survey-info-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.survey-info-container > div{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.survey-info{
+    align-self: flex-start;
+}
+
+.btn-quest{
+    padding: 10px;
+    color: black;
+    background-color: aqua;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.survey-question{
+    display: flex;
+    padding: 10px;
+}
+
+.questions{
+    width: 90%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-left: 4px solid rgb(21, 201, 201);
+}
+
+.questions:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.form-group-survey{
+    padding-left: 10px;
+}
+
+.form-group-survey textarea{
+    width: 100%;
+}
+
+
+.bg-modal{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(0,0,0,.2);
+    visibility: hidden;
+}
+
+.--active{
+    visibility: visible;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    width: 60%;
+    height: min-content;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-container{
+    display: flex;
+    justify-content: space-around ;
+}
+
+.modal-container h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.question-type select, .question-type textarea{
+    width: 90%;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+}
+
+.modal-container > div{
+    width: 90%;
+}
+
+.ekis{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+}
+
+.modal-btns{
+    width: 100%;
+    text-align: right;
+}
+
+.btn-q{
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    border:none;
+}
+
+.btn-save-question{
+    background-color: lightgreen;
+}
+
+.btn-cancel-question{
+    background-color: lightsalmon;
+}
+
+.form-group-preview{
+    display: flex; 
+    width:  100%;
+    justify-content: center;
+    align-content: center;
+}
+.form-group-preview input:nth-child(1){
+    padding: 20px;
+    flex: 1; 
+}
+
+.form-group-preview input[type='checkbox']{
+    flex: 1;
+}
+
+.form-group-preview input:nth-child(2){
+    flex: 2; 
+}
+
+
+/* PREVIEW TABLE*/
+.preview div{
+    display: block;
+}
+
+
+.table{
+  
+    text-align: center;
+    padding: 10px;
+}
+
+.table-head th{
+    font-size: 18px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+}
+
+.table-body tr td{
+    padding-top: 10px;
+}
+
+.form-control{
+    width: 90%;
+    padding: 5px;
+    outline:none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.btn-add-opt{
+    width: 100%;
+    text-align: center;
+}
+
+.btn-add{
+    padding: 10px 25px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+}
+
+.btn-opt-delete{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
+
+/* alumni */
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+table thead tr th{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+table tbody tr td{
+
+    padding-top: 5px;
+}
+
+.group {
+    border: 1px solid black; 
+    width: 100%;
+}
+
+.add-dept, .add-batch{
+    width: 20vw;
+  
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.add-dept form, .add-batch form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.group-nav{
+    margin-bottom: 50px;
+    padding: 20px;
+}

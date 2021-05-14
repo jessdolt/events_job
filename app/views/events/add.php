@@ -9,11 +9,11 @@
                 <input type="file" id="fileUpload" name="fileUpload" accept="image/*"> 
                 <span><?php echo $data['file_err'];?></span>
                 <label for="title">Title</label>
-                <input type="text" name="title">
+                <input type="text" name="title" value="<?php echo $data['title'];?>">
                 <span><?php echo $data['title_err'];?></span>
                 <label for="description">Description</label>
-                <textarea name="description" cols="30" rows="10"></textarea>
-                <span><?php echo $data['description_err'];?></span>
+                <textarea name="description" cols="30" rows="10"><?php echo $data['description'];?></textarea>
+                <span><?php echo $data['description_err'];?> </span>
                 <input type="submit" value="Submit" class="btn" name="submit">
             </form>
         </div>

@@ -13,6 +13,7 @@
         public function add(){
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
+                print_r($_POST);
                 $file = $_FILES['fileUpload'];
 
                 $data = [
@@ -68,8 +69,6 @@
                     else{
                         die("Something went wrong");
                     }
-                } else{
-                    $this->view('events/add', $data);
                 } 
             } 
 
