@@ -37,19 +37,21 @@
         </div>
     </div>
 
-    <?php include 'modal_survey'?>
 <script>
     $(document).ready(function(){
         $('#manage_survey').submit(function(e){
             e.preventDefault();
-            console.log('asd' + $('#manage_survey').serialize());
+            //console.log('asd' + $('#manage_survey').serialize());
+            
             $.ajax({ 
-                url:'<?php echo URLROOT;?>/surveys/check',
-                data: $('#manage_survey').serialize(),
+                url:'<?php echo URLROOT;?>/surveys/save_survey',
+                data: new FormData($(this)[0]), 
+                cache: false,
+		        contentType: false,
+		        processData: false,
                 method: 'POST',
                 type: 'POST',
                 success:function(res){
-                    console.log(res);
                     if(res == 1){
                         location.replace('<?php echo URLROOT;?>/surveys');
                     }

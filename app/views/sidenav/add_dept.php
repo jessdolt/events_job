@@ -8,8 +8,6 @@
             <form action="<?php echo URLROOT;?>/SideNav/new_dept" method="POST">
                 <label for="dept_name">Department Name</label>
                 <input type="text" name="dept_name">
-                <label for="dept_code">Department Code</label>
-                <input type="text" name="dept_code">
                 <input type="submit" value='Submit'>
             </form>
         </div>

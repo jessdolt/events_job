@@ -8,18 +8,29 @@
 
 
         public function index(){
-            $row = $this->sideModel->showDepartment();
+            $department = $this->sideModel->getDept();
+            $courses = $this->sideModel->getCourses();
+            $classification = $this->sideModel->getClassification();
+            
+            $data = [
+                'department' => $department,
+                'courses' => $courses,
+                'classification' => $classification
+            ];
 
-            $this->view('sidenav/index', $row);
+            $this->view('sidenav/index', $data);
         }
 
         public function new_dept(){
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $data =[
                     'dept_name' => $_POST['dept_name'],
-                    'dept_code' => $_POST['dept_code']
+                    
                 ];
-                $this->sideModel->addDepartment($data);
+                if($this->sideModel->addDept($data)){
+                    redirect('sideNav');
+                }
+                    
             }
 
             else{
@@ -27,6 +38,27 @@
             }
 
             $this->view('sideNav/add_dept', $data);
+        }
+
+        public function new_course(){
+            $department = $this->sideModel->getDept();
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $data =[
+                    'course_name' => $_POST['course_name'],
+                    'course_code' => $_POST['course_code'],
+                    'department_id' => $_POST['dept_id']
+                    
+                ];
+                $this->sideModel->addCourse($data);
+            }
+
+            else{
+                $data = [
+                    'department' => $department
+                ];
+            }
+
+            $this->view('sideNav/add_course', $data);
         }
 
         public function new_batch(){

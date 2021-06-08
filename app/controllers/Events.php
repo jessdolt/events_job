@@ -10,10 +10,16 @@
             $this->view('events/index', $data);
         }
 
+        public function prac(){
+            $data = [];
+            $this->view('events/multiple_uploads', $data);
+        }
+
+
         public function add(){
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $_POST = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
-                print_r($_POST);
+                //print_r($_POST);
                 $file = $_FILES['fileUpload'];
 
                 $data = [
@@ -35,7 +41,7 @@
               
                 $fileExt = explode ('.',$filename);
                 $fileActualExt = strtolower(end($fileExt));
-                $allowed = array('jpg','jpeg', 'png', 'pdf');
+                $allowed = array('jpg','jpeg', 'png', 'pdf','jfif');
 
                 if(in_array($fileActualExt, $allowed)){
                     if( $fileError === 0){

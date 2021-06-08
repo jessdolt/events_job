@@ -12,8 +12,8 @@
                     <p><?php echo $survey->description?></p>
                     <div class="survey-buttons">
                         <a href="<?php echo URLROOT;?>/surveys/survey_list/<?php echo $survey->id?>">View</a>
-                        <a href="#">Edit</a>
-                        <a href="#">Delete</a>
+                        <a href="<?php echo URLROOT;?>/surveys/edit_survey/<?php echo $survey->id?>">Edit</a>
+                        <a href="<?php echo URLROOT;?>/surveys/delete_survey/<?php echo $survey->id?>">Delete</a>
                     </div>
                     <?php }?>
                 </div>

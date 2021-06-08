@@ -6,7 +6,7 @@
             $this->userModel = $this->model('user');
         }
 
-        public function index(){
+        public function index(){ 
          $data = $this->alumniModel->showAlumni();
 
          $this->view('alumni/index',$data);
@@ -96,6 +96,7 @@
             }
         }
 
+        
         
 
     }
