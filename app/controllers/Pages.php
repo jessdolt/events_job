@@ -7,10 +7,12 @@ class Pages extends Controller{
     
     public function index(){
         $this->forumModal = $this->model('forum');
+        
         $newData =[
             'topic_id' => 1,
             'user_id' => 1
         ];
+
         $rowUserVote = $this->forumModal->getUserVote($newData);
 
         $data = [
